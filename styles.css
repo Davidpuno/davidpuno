@@ -15,7 +15,6 @@ header {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -28,14 +27,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff; /* Change font color to white */
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #666;
+    color: #ccc; /* Change text color to a lighter shade of gray on hover */
+    text-decoration: underline; /* Add underline effect on hover */
 }
 
 section {
@@ -50,86 +50,77 @@ footer {
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 .about-container {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add some space between sections */
-    color: black; /* Set font color to black */
+    margin-bottom: 20px;
+    color: black;
 }
 
-/* Optional: Adjusting text alignment and font size */
 .about-container p {
     text-align: justify;
     font-size: 16px;
 }
 
-/* Styling for contact section */
-#contact {
-    margin-top: 20px; /* Add some space between sections */
-}
-
-/* Styling for contact information */
 #contact ul {
-    list-style-type: none; /* Remove default list styles */
+    list-style-type: none;
     padding: 0;
 }
 
 #contact ul li {
-    margin-bottom: 10px; /* Add space between each contact info */
+    margin-bottom: 10px;
 }
 
-/* Styling for icons */
 #contact ul li i {
-    margin-right: 5px; /* Add space between icon and text */
-    font-size: 20px; /* Adjust icon size */
-    vertical-align: middle; /* Align icons vertically with text */
+    margin-right: 5px;
+    font-size: 20px;
+    vertical-align: middle;
 }
 
-#certificates {
-    margin-top: 20px; /* Add some space between sections */
+#certificates, #photo-album {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.certificate {
-    margin-bottom: 20px; /* Add space between certificates */
+.certificate, .album-photo {
+    margin: 0 10px 20px;
 }
 
-.certificate img {
-    width: 100%; /* Make sure the image fills its container */
-    border-radius: 10px; /* Add some rounded corners to the image */
+.certificate img, .album-photo img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #fff; /* Add border to both certificates and photos */
+    transition: transform 0.3s ease;
 }
 
-nav ul li a {
-    color: #fff; /* Change font color to white */
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+.certificate img:hover, .album-photo img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
-nav ul li a:hover {
-    color: #ccc; /* Change text color to a lighter shade of gray on hover */
+/* Portfolio images */
+.project img {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ccc; /* Change text color to a lighter shade of gray on hover */
-    text-decoration: underline; /* Add underline effect on hover */
+.project img:hover {
+    transform: scale(1.05);
 }
 
-#certificates {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-}
-
-.certificate {
-    margin: 0 10px 20px; /* Add margin around each certificate */
-}
-
-.certificate img {
-    width: 200px; /* Adjust the width of the certificate images */
-    height: 150px; /* Set a standard height for the certificate images */
-    display: block; /* Ensure images are displayed as block elements */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+.album-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add space between the images */
+    flex-wrap: nowrap; /* Ensure all images stay on one line */
 }
