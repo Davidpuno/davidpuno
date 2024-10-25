@@ -1,62 +1,81 @@
-/* Modern styling */
+/* Modern and sleek styling */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #080808;
+    background-color: #1a1a1a;
     color: #fff;
 }
 
 header {
-    background-color: #000; /* Set the background color to black */
-    color: #fff; /* Set the text color to white */
+    background-color: #141414;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 10;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff; /* Change font color to white */
+    color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Change text color to a lighter shade of gray on hover */
-    text-decoration: underline; /* Add underline effect on hover */
+    background-color: #ff6347;
+    border-radius: 5px;
+    color: #fff;
 }
 
 section {
-    padding: 40px;
+    padding: 60px;
+    margin-bottom: 30px;
+}
+
+#about, #portfolio, #contact {
+    background-color: #252525;
+}
+
+#resume, #skills, #certificates, #photo-album {
+    background-color: #1a1a1a;
 }
 
 footer {
-    background-color: #000; /* Set the background color to black */
-    color: #fff; /* Set the text color to white */
+    background-color: #141414;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .about-container {
-    background-color: #f2f2f2;
+    background-color: #2c2c2c;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    color: black;
 }
 
 .about-container p {
@@ -64,7 +83,7 @@ footer {
     font-size: 16px;
 }
 
-#contact ul {
+#contact ul, #certificates ul {
     list-style-type: none;
     padding: 0;
 }
@@ -74,8 +93,8 @@ footer {
 }
 
 #contact ul li i {
-    margin-right: 5px;
-    font-size: 20px;
+    margin-right: 10px;
+    font-size: 22px;
     vertical-align: middle;
 }
 
@@ -83,44 +102,89 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.certificate, .album-photo {
-    margin: 0 10px 20px;
+    margin-top: 30px;
 }
 
 .certificate img, .album-photo img {
-    width: 200px;
-    height: 150px;
+    width: 220px;
+    height: 160px;
     border-radius: 10px;
     object-fit: cover;
-    border: 2px solid #fff; /* Add border to both certificates and photos */
-    transition: transform 0.3s ease;
+    margin: 10px;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificate img:hover, .album-photo img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 /* Portfolio images */
 .project img {
-    width: 200px;
-    height: 150px;
+    width: 220px;
+    height: 160px;
     border: 2px solid #fff;
     border-radius: 8px;
     object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 .album-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Add space between the images */
-    flex-wrap: nowrap; /* Ensure all images stay on one line */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    .about-container p {
+        font-size: 14px;
+    }
+
+    .certificate img, .album-photo img, .project img {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .certificate img, .album-photo img, .project img {
+        width: 150px;
+        height: 100px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }
